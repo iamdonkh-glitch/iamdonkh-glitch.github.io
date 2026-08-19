@@ -1,0 +1,295 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1000" viewBox="0 0 1800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Biology-Guided De Novo Peptide Sequencing</title>
+  <desc id="desc">Graphical abstract showing an incomplete mass spectrum feeding two complementary methods: mass-aware attention bias and privileged knowledge distillation. Their combination improves average accuracy by 4.6 percent over Casanovo across a nine-species benchmark.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#F5F2FF"/>
+    </linearGradient>
+    <linearGradient id="combined" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="softBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EFF6FF"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <linearGradient id="softOrange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FFF1E8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#183153" flood-opacity="0.09"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#EA580C"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#7C3AED"/>
+    </marker>
+    <style>
+      text { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+      .kicker { font-size: 18px; font-weight: 700; letter-spacing: 3px; fill: #2563EB; }
+      .title { font-size: 56px; font-weight: 750; letter-spacing: -1.5px; fill: #10233E; }
+      .subtitle { font-size: 23px; font-weight: 450; fill: #52657B; }
+      .step { font-size: 15px; font-weight: 750; letter-spacing: 2px; fill: #708297; }
+      .section { font-size: 25px; font-weight: 700; fill: #12243E; }
+      .body { font-size: 17px; font-weight: 450; fill: #4B6076; }
+      .small { font-size: 14px; font-weight: 500; fill: #667A90; }
+      .tiny { font-size: 12px; font-weight: 600; fill: #718399; }
+      .metric { font-size: 20px; font-weight: 750; fill: #FFFFFF; }
+      .bigmetric { font-size: 78px; font-weight: 800; letter-spacing: -3px; fill: #FFFFFF; }
+      .equation { font-family: "STIX Two Math", "Times New Roman", serif; font-size: 20px; fill: #173150; }
+      .label { font-size: 14px; font-weight: 750; letter-spacing: .7px; fill: #FFFFFF; }
+      .token { font-size: 20px; font-weight: 750; fill: #273B53; text-anchor: middle; dominant-baseline: middle; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1000" fill="url(#bg)"/>
+  <circle cx="1690" cy="82" r="205" fill="#EDE9FE" opacity="0.52"/>
+  <circle cx="65" cy="955" r="230" fill="#DBEAFE" opacity="0.52"/>
+  <path d="M0 183 H1800" stroke="#DCE5F0" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="70" y="48" class="kicker">BIOLOGY-GUIDED AI FOR MASS SPECTROMETRY</text>
+  <text x="70" y="112" class="title">Biology-Guided De Novo Peptide Sequencing</text>
+  <text x="72" y="154" class="subtitle">Mass-aware attention and privileged distillation recover sequence evidence from incomplete spectra.</text>
+
+  <!-- Underlying flow -->
+  <path d="M488 505 C520 505, 518 370, 548 370" fill="none" stroke="#8AB7F7" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <path d="M488 545 C520 545, 518 710, 548 710" fill="none" stroke="#F7AA76" stroke-width="4" marker-end="url(#arrowOrange)"/>
+  <path d="M1260 370 C1292 370, 1288 500, 1320 500" fill="none" stroke="#8AB7F7" stroke-width="4"/>
+  <path d="M1260 710 C1292 710, 1288 540, 1320 540" fill="none" stroke="#F7AA76" stroke-width="4"/>
+  <path d="M1320 520 H1345" fill="none" stroke="#7C3AED" stroke-width="5" marker-end="url(#arrowPurple)"/>
+
+  <!-- Left: problem -->
+  <g filter="url(#shadow)">
+    <rect x="55" y="218" width="433" height="665" rx="28" fill="#FFFFFF"/>
+  </g>
+  <text x="88" y="262" class="step">01  PROBLEM</text>
+  <text x="88" y="301" class="section">Incomplete fragmentation</text>
+  <text x="88" y="330" class="body">Key backbone ions may be absent</text>
+  <text x="88" y="353" class="body">from the observed MS/MS spectrum.</text>
+
+  <!-- Spectrum plot -->
+  <rect x="83" y="390" width="375" height="250" rx="20" fill="#F7FAFE" stroke="#D9E4F0"/>
+  <path d="M112 602 H432 M112 602 V416" stroke="#AAB9C9" stroke-width="2"/>
+  <text x="272" y="627" class="small" text-anchor="middle">m/z</text>
+  <text x="99" y="505" class="small" text-anchor="middle" transform="rotate(-90 99 505)">intensity</text>
+
+  <g stroke="#2563EB" stroke-width="5" stroke-linecap="round">
+    <path d="M129 602 V555"/><path d="M151 602 V532"/><path d="M177 602 V566"/>
+    <path d="M207 602 V463"/><path d="M234 602 V545"/><path d="M278 602 V505"/>
+    <path d="M304 602 V560"/><path d="M349 602 V442"/><path d="M376 602 V523"/>
+    <path d="M417 602 V548"/>
+  </g>
+  <g stroke="#A6B3C2" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 7">
+    <path d="M258 602 V470"/><path d="M327 602 V495"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#A6B3C2" stroke-width="2">
+    <circle cx="258" cy="470" r="6"/><circle cx="327" cy="495" r="6"/>
+  </g>
+  <text x="258" y="448" class="tiny" text-anchor="middle">missing</text>
+  <text x="327" y="473" class="tiny" text-anchor="middle">missing</text>
+
+  <!-- Delta-m arc -->
+  <path d="M207 452 Q278 390 349 431" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+  <path d="M207 452 l10 -2 l-5 9" fill="#2563EB"/>
+  <path d="M349 431 l-10 0 l5 9" fill="#2563EB"/>
+  <rect x="224" y="393" width="110" height="34" rx="17" fill="#E8F1FF"/>
+  <text x="279" y="415" class="small" text-anchor="middle" fill="#1D4ED8">Δm ≈ residue</text>
+
+  <rect x="88" y="684" width="365" height="78" rx="16" fill="#F3F6FA"/>
+  <circle cx="114" cy="711" r="5" fill="#2563EB"/>
+  <text x="130" y="717" class="body">Observed fragment peak</text>
+  <circle cx="114" cy="742" r="5" fill="#FFFFFF" stroke="#98A7B8" stroke-width="2"/>
+  <text x="130" y="748" class="body">Missing theoretical b/y ion</text>
+
+  <text x="88" y="817" class="small">Ambiguous fragment ladders</text>
+  <text x="88" y="842" class="section">→ uncertain residues</text>
+
+  <!-- Center top: attention bias -->
+  <g filter="url(#shadow)">
+    <rect x="548" y="218" width="712" height="306" rx="28" fill="url(#softBlue)"/>
+  </g>
+  <text x="580" y="258" class="step">02A  STRUCTURAL PRIOR</text>
+  <text x="580" y="294" class="section">Mass-aware attention bias</text>
+  <text x="580" y="322" class="body">Encode amino-acid mass relationships directly in self-attention.</text>
+
+  <!-- Peak pair -->
+  <rect x="579" y="352" width="157" height="126" rx="18" fill="#FFFFFF" stroke="#D7E4F4"/>
+  <path d="M602 449 H714" stroke="#B6C5D5" stroke-width="2"/>
+  <path d="M620 449 V392 M696 449 V373" stroke="#2563EB" stroke-width="6" stroke-linecap="round"/>
+  <path d="M620 384 Q658 350 696 365" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+  <text x="658" y="406" class="tiny" text-anchor="middle">Δm</text>
+  <text x="658" y="468" class="tiny" text-anchor="middle">peak pair</text>
+
+  <path d="M750 414 H787" stroke="#2563EB" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+  <!-- Mass table -->
+  <rect x="793" y="352" width="145" height="126" rx="18" fill="#FFFFFF" stroke="#D7E4F4"/>
+  <text x="865" y="378" class="tiny" text-anchor="middle">RESIDUE MASSES</text>
+  <g class="small">
+    <text x="814" y="406">G</text><text x="910" y="406" text-anchor="end">57.02</text>
+    <text x="814" y="431">A</text><text x="910" y="431" text-anchor="end">71.04</text>
+    <text x="814" y="456">F</text><text x="910" y="456" text-anchor="end">147.07</text>
+  </g>
+
+  <path d="M950 414 H987" stroke="#2563EB" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+  <!-- Attention matrices -->
+  <rect x="993" y="352" width="216" height="126" rx="18" fill="#FFFFFF" stroke="#D7E4F4"/>
+  <text x="1010" y="380" class="tiny">ATTENTION LOGITS</text>
+  <g transform="translate(1011 394)">
+    <rect width="55" height="55" rx="6" fill="#E7EDF5"/>
+    <g fill="#AFC5DF"><rect x="5" y="6" width="11" height="11" rx="2"/><rect x="21" y="6" width="11" height="11" rx="2"/><rect x="37" y="6" width="11" height="11" rx="2"/><rect x="5" y="22" width="11" height="11" rx="2"/><rect x="21" y="22" width="11" height="11" rx="2"/><rect x="37" y="22" width="11" height="11" rx="2"/><rect x="5" y="38" width="11" height="11" rx="2"/><rect x="21" y="38" width="11" height="11" rx="2"/><rect x="37" y="38" width="11" height="11" rx="2"/></g>
+    <text x="68" y="35" class="section" fill="#58708B">+</text>
+    <g transform="translate(91 0)">
+      <rect width="55" height="55" rx="6" fill="#E8F1FF"/>
+      <g fill="#BDD4F7"><rect x="5" y="6" width="11" height="11" rx="2"/><rect x="21" y="6" width="11" height="11" rx="2"/><rect x="37" y="6" width="11" height="11" rx="2"/><rect x="5" y="22" width="11" height="11" rx="2"/><rect x="37" y="22" width="11" height="11" rx="2"/><rect x="5" y="38" width="11" height="11" rx="2"/><rect x="21" y="38" width="11" height="11" rx="2"/></g>
+      <rect x="21" y="22" width="11" height="11" rx="2" fill="#2563EB"/>
+      <rect x="37" y="38" width="11" height="11" rx="2" fill="#2563EB"/>
+    </g>
+    <text x="155" y="35" class="section" fill="#58708B">→</text>
+  </g>
+  <text x="1099" y="465" class="tiny" text-anchor="middle">QKᵀ / √d  +  Bmass</text>
+
+  <rect x="1110" y="246" width="116" height="42" rx="21" fill="#2563EB" opacity="0.88"/>
+  <text x="1168" y="274" class="metric" text-anchor="middle">+3.6%</text>
+
+  <!-- Center bottom: KD -->
+  <g filter="url(#shadow)">
+    <rect x="548" y="548" width="712" height="335" rx="28" fill="url(#softOrange)"/>
+  </g>
+  <text x="580" y="588" class="step">02B  PRIVILEGED SUPERVISION</text>
+  <text x="580" y="624" class="section">Knowledge distillation</text>
+  <text x="580" y="652" class="body">Transfer restored-fragment evidence during training; deploy the student alone.</text>
+
+  <rect x="1110" y="576" width="116" height="42" rx="21" fill="#EA580C" opacity="0.88"/>
+  <text x="1168" y="604" class="metric" text-anchor="middle">+2.0%</text>
+
+  <!-- Training boundary -->
+  <rect x="579" y="675" width="611" height="158" rx="20" fill="#FFFFFF" stroke="#F2B487" stroke-width="2" stroke-dasharray="8 6"/>
+  <rect x="596" y="662" width="126" height="27" rx="13.5" fill="#EA580C"/>
+  <text x="659" y="681" class="label" text-anchor="middle">TRAINING ONLY</text>
+
+  <!-- Teacher lane -->
+  <text x="604" y="708" class="tiny">HYBRID</text>
+  <path d="M604 738 H731" stroke="#B9C6D4" stroke-width="1.5"/>
+  <g stroke="#2563EB" stroke-width="3.5" stroke-linecap="round">
+    <path d="M615 738 V721"/><path d="M637 738 V704"/><path d="M661 738 V726"/><path d="M697 738 V711"/><path d="M720 738 V723"/>
+  </g>
+  <g stroke="#EA580C" stroke-width="3.5" stroke-linecap="round">
+    <path d="M679 738 V697"/><path d="M708 738 V703"/>
+  </g>
+  <path d="M741 720 H765" stroke="#EA580C" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <rect x="770" y="692" width="116" height="55" rx="14" fill="#FFF3E8" stroke="#F0A36E"/>
+  <text x="828" y="713" class="tiny" text-anchor="middle" fill="#9A3412">FROZEN</text>
+  <text x="828" y="735" class="section" text-anchor="middle" fill="#9A3412">Teacher</text>
+  <path d="M896 720 H922" stroke="#EA580C" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <g transform="translate(930 693)">
+    <g transform="translate(0 0)">
+      <rect x="0" y="23" width="23" height="24" rx="4" fill="#F7C39F"/><rect x="28" y="9" width="23" height="38" rx="4" fill="#EA580C"/><rect x="56" y="19" width="23" height="28" rx="4" fill="#F4A873"/><rect x="84" y="4" width="23" height="43" rx="4" fill="#D94E08"/><rect x="112" y="15" width="23" height="32" rx="4" fill="#EF7D3A"/><rect x="140" y="25" width="23" height="22" rx="4" fill="#F7C39F"/>
+    </g>
+  </g>
+
+  <!-- Student lane -->
+  <text x="604" y="777" class="tiny">OBSERVED</text>
+  <path d="M604 807 H731" stroke="#B9C6D4" stroke-width="1.5"/>
+  <g stroke="#2563EB" stroke-width="3.5" stroke-linecap="round">
+    <path d="M615 807 V790"/><path d="M637 807 V773"/><path d="M661 807 V795"/><path d="M697 807 V780"/><path d="M720 807 V792"/>
+  </g>
+  <path d="M741 789 H765" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <rect x="770" y="761" width="116" height="55" rx="14" fill="#EEF4FF" stroke="#91B9F4"/>
+  <text x="828" y="783" class="tiny" text-anchor="middle" fill="#1D4ED8">DEPLOYED</text>
+  <text x="828" y="805" class="section" text-anchor="middle" fill="#1D4ED8">Student</text>
+  <path d="M896 789 H922" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <g transform="translate(930 762)">
+    <g transform="translate(0 0)">
+      <rect x="0" y="25" width="23" height="22" rx="4" fill="#BCD3F7"/><rect x="28" y="12" width="23" height="35" rx="4" fill="#3678DC"/><rect x="56" y="21" width="23" height="26" rx="4" fill="#89B1ED"/><rect x="84" y="7" width="23" height="40" rx="4" fill="#2563EB"/><rect x="112" y="18" width="23" height="29" rx="4" fill="#6799E5"/><rect x="140" y="27" width="23" height="20" rx="4" fill="#BCD3F7"/>
+    </g>
+  </g>
+
+  <!-- all-position KL -->
+  <path d="M1115 736 V770" stroke="#7C3AED" stroke-width="3" stroke-dasharray="6 5" marker-end="url(#arrowPurple)"/>
+  <rect x="1052" y="739" width="130" height="26" rx="13" fill="#F1EAFE"/>
+  <text x="1117" y="757" class="tiny" text-anchor="middle" fill="#6D28D9">KL · ALL POSITIONS</text>
+
+  <!-- Inference note -->
+  <rect x="579" y="846" width="611" height="1" fill="#E3D7F7"/>
+  <rect x="604" y="853" width="107" height="26" rx="13" fill="#7C3AED"/>
+  <text x="657" y="871" class="label" text-anchor="middle">INFERENCE</text>
+  <text x="729" y="871" class="small">Observed spectrum → student → peptide</text>
+
+  <!-- Right: result -->
+  <g filter="url(#shadow)">
+    <rect x="1345" y="218" width="400" height="665" rx="28" fill="#FFFFFF"/>
+  </g>
+  <text x="1378" y="262" class="step">03  DEPLOYABLE MODEL</text>
+  <text x="1378" y="301" class="section">Biology-guided prediction</text>
+  <text x="1378" y="330" class="body">The student uses only the observed</text>
+  <text x="1378" y="353" class="body">spectrum to generate a peptide.</text>
+
+  <!-- Compact deployable pipeline -->
+  <rect x="1377" y="387" width="336" height="185" rx="24" fill="#F5F3FC" stroke="#E4DDF7"/>
+  <text x="1545" y="417" class="tiny" text-anchor="middle">OBSERVED SPECTRUM  →  STUDENT  →  PEPTIDE</text>
+  <g transform="translate(1400 441)">
+    <path d="M0 55 H74" stroke="#B9C6D4" stroke-width="1.5"/>
+    <g stroke="#2563EB" stroke-width="4" stroke-linecap="round">
+      <path d="M8 55 V39"/><path d="M22 55 V19"/><path d="M39 55 V45"/><path d="M57 55 V29"/><path d="M69 55 V41"/>
+    </g>
+    <path d="M82 38 H104" stroke="#7C3AED" stroke-width="2.5" marker-end="url(#arrowPurple)"/>
+    <rect x="109" y="10" width="99" height="58" rx="14" fill="#EEE8FC" stroke="#B8A2EA"/>
+    <text x="158" y="35" class="tiny" text-anchor="middle" fill="#6D28D9">DEPLOYED</text>
+    <text x="158" y="57" class="section" text-anchor="middle" fill="#4C1D95">Student</text>
+    <path d="M217 38 H239" stroke="#7C3AED" stroke-width="2.5" marker-end="url(#arrowPurple)"/>
+  </g>
+  <text x="1545" y="545" class="small" text-anchor="middle">No privileged peaks required at inference</text>
+
+  <!-- Peptide tokens -->
+  <text x="1379" y="610" class="tiny">DE NOVO SEQUENCE</text>
+  <g transform="translate(1378 627)">
+    <rect x="0" y="0" width="39" height="42" rx="10" fill="#E9F1FD"/><text x="19.5" y="22" class="token">P</text>
+    <rect x="46" y="0" width="39" height="42" rx="10" fill="#E9F1FD"/><text x="65.5" y="22" class="token">E</text>
+    <rect x="92" y="0" width="39" height="42" rx="10" fill="#E9F1FD"/><text x="111.5" y="22" class="token">P</text>
+    <rect x="138" y="0" width="39" height="42" rx="10" fill="#EEE8FC"/><text x="157.5" y="22" class="token">T</text>
+    <rect x="184" y="0" width="39" height="42" rx="10" fill="#EEE8FC"/><text x="203.5" y="22" class="token">I</text>
+    <rect x="230" y="0" width="39" height="42" rx="10" fill="#EEE8FC"/><text x="249.5" y="22" class="token">D</text>
+    <rect x="276" y="0" width="39" height="42" rx="10" fill="#EEE8FC"/><text x="295.5" y="22" class="token">E</text>
+  </g>
+
+  <!-- Gain chart -->
+  <text x="1379" y="714" class="tiny">NINE-SPECIES EVALUATION · AVG ACC GAIN</text>
+  <line x1="1379" y1="850" x2="1707" y2="850" stroke="#CDD8E4" stroke-width="1.5"/>
+  <g class="tiny">
+    <text x="1379" y="870" text-anchor="middle">0</text>
+    <text x="1450" y="870" text-anchor="middle">1</text>
+    <text x="1521" y="870" text-anchor="middle">2</text>
+    <text x="1592" y="870" text-anchor="middle">3</text>
+    <text x="1663" y="870" text-anchor="middle">4%</text>
+  </g>
+  <g>
+    <text x="1379" y="750" class="small">KD</text>
+    <rect x="1425" y="735" width="142" height="18" rx="9" fill="#EA580C" opacity="0.82"/>
+    <text x="1577" y="750" class="small" fill="#9A3412">+2.0%</text>
+
+    <text x="1379" y="792" class="small">Bias</text>
+    <rect x="1425" y="777" width="256" height="18" rx="9" fill="#2563EB" opacity="0.82"/>
+    <text x="1691" y="792" class="small" fill="#1D4ED8">+3.6%</text>
+
+    <text x="1379" y="834" class="small">Both</text>
+    <rect x="1425" y="819" width="288" height="18" rx="9" fill="url(#combined)" opacity="0.82"/>
+    <text x="1719" y="834" class="small" fill="#6D28D9">+4.6%</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="70" y="944" class="small">Nine-species leave-one-species-out benchmark  •  Average accuracy gain over the Casanovo baseline</text>
+  <g transform="translate(1322 920)">
+    <circle cx="9" cy="9" r="7" fill="#2563EB"/><text x="25" y="14" class="small">structural prior</text>
+    <circle cx="164" cy="9" r="7" fill="#EA580C"/><text x="180" y="14" class="small">privileged supervision</text>
+  </g>
+</svg>
